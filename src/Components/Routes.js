@@ -1,0 +1,11 @@
+export const HOME_ROUTE = '/';
+export const ABOUT_ROUTE = '/about';
+export const NEWS_ROUTE = '/news';
+export const AUTH_ROUTE = '/auth';
+export const SIGN_IN_ROUTE = '/signin';
+export const SIGN_UP_ROUTE = '/signup';
+export const LATEST_ROUTE = '/latest';
+export const POLITIC_ROUTE = '/politics';
+export const SCIENCE_ROUTE = '/science';
+export const SPORT_ROUTE = '/sport';
+export const COVID_ROUTE = '/covid';
