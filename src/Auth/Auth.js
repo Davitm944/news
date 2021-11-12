@@ -2,7 +2,7 @@
 /* eslint-disable default-case */
 import { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { BrowserRouter as Switch, Route, useNavigate, Routes, useLocation } from 'react-router-dom';
+import { Routes, Route, useNavigate, useLocation } from 'react-router-dom';
 
 import fire from '../fire';
 import { editHasAccount } from '../redux/hasAccountSlice';
@@ -64,11 +64,6 @@ function Auth() {
 		});
 	};
 
-	const onSignout = () => {
-		fire.auth().signOut();
-		dispatch(editHasAccount(false));
-	};
-
 	const authListener = () => {
 		fire.auth().onAuthStateChanged((user) => {
 			if (user) {
@@ -85,12 +80,11 @@ function Auth() {
 
 	useEffect(() => {
 		authListener();
-		alert(location.pathname);
+		alert(path);
 	}, []);
 
 	return (
 		<Routes>
-			{alert('ds')}
 			<Route
 				path={SIGN_IN_ROUTE}
 				element={
@@ -108,8 +102,9 @@ function Auth() {
 					/>
 				}
 			/>
+
 			<Route
-				path={SIGN_UP_ROUTE}
+				path='signup'
 				element={
 					<SignUp
 						email={email}
