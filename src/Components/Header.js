@@ -114,7 +114,7 @@ function Header() {
 					<AccountCircleOutlinedIcon className={classes.icon} />
 					{
 						hasAccount ? <ExitToAppIcon onClick={onSignout} className={classes.signOutBtn} /> :
-						<a className={classes.signInBtn} onClick={() => navigate(SIGN_IN_ROUTE)}>
+						<a className={classes.signInBtn} onClick={() => navigate('/auth/signin')}>
 							Sign In
 						</a>}
 				</span>

@@ -4,6 +4,7 @@ import './Login.css';
 import { SIGN_UP_ROUTE } from '../Components/Routes';
 import PersonIcon from '@mui/icons-material/Person';
 import LockIcon from '@mui/icons-material/Lock';
+import SignUp from './SignUp';
 
 function SignIn(props) {
 	const { setEmail, setPassword, handleLogin, emailError, passwordError } = props;
@@ -60,7 +61,7 @@ function SignIn(props) {
 					<a
 						href='#'
 						onClick={() => {
-							navigate(SIGN_UP_ROUTE);
+							navigate('/auth/signup');
 						}}>
 						Sign up
 					</a>

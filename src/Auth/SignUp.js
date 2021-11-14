@@ -1,4 +1,5 @@
-import { useNavigate } from 'react-router-dom';
+/* eslint-disable jsx-a11y/anchor-is-valid */
+import { useNavigate, useLocation, Routes, Route } from 'react-router-dom';
 
 import './Login.css';
 import { SIGN_IN_ROUTE, SIGN_UP_ROUTE } from '../Components/Routes';
@@ -8,6 +9,7 @@ import LockIcon from '@mui/icons-material/Lock';
 function SignUp(props) {
 	const { setEmail, setPassword, handleSignup, emailError, passwordError } = props;
 	const navigate = useNavigate();
+
 	const onEmailType = (e) => {
 		setEmail(e.target.value);
 	};
@@ -57,7 +59,11 @@ function SignUp(props) {
 				</div>
 				<div class='signup'>
 					Already have an account?
-					<a href='#' onClick={() => navigate(SIGN_IN_ROUTE)}>
+					<a
+						href='#'
+						onClick={() => {
+							navigate('/auth/signin');
+						}}>
 						Sign in
 					</a>
 				</div>

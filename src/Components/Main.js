@@ -11,6 +11,7 @@
 // 		<>
 
 // <Header></Header>
+// <h1>Main page</h1>
 // 		<Routes>
 // 			<Route path={SIGN_IN_ROUTE} element={	<SignIn props = {props} />} />
 // 			<Route path={SIGN_UP_ROUTE} element={	<SignUp />}/>

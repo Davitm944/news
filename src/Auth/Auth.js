@@ -2,7 +2,7 @@
 /* eslint-disable default-case */
 import { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { Routes, Route, useNavigate, useLocation } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, useNavigate, useLocation } from 'react-router-dom';
 
 import fire from '../fire';
 import { editHasAccount } from '../redux/hasAccountSlice';
@@ -10,6 +10,7 @@ import { HOME_ROUTE, SIGN_IN_ROUTE, SIGN_UP_ROUTE } from '../Components/Routes';
 import SignIn from './SignIn';
 import SignUp from './SignUp';
 import Main from '../Components/Main';
+import Home from '../Components/Home';
 function Auth() {
 	// eslint-disable-next-line no-unused-vars
 	const [ user, setUser ] = useState('');
@@ -80,13 +81,12 @@ function Auth() {
 
 	useEffect(() => {
 		authListener();
-		alert(path);
 	}, []);
 
 	return (
 		<Routes>
 			<Route
-				path={SIGN_IN_ROUTE}
+				path='/signin'
 				element={
 					<SignIn
 						email={email}
@@ -104,7 +104,7 @@ function Auth() {
 			/>
 
 			<Route
-				path='signup'
+				path='/signup'
 				element={
 					<SignUp
 						email={email}
@@ -120,6 +120,7 @@ function Auth() {
 					/>
 				}
 			/>
+			{/* <Route path='/*' element={<Home />} /> */}
 		</Routes>
 	);
 }

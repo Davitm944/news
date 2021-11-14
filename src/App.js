@@ -1,6 +1,7 @@
 
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import Auth from './Auth/Auth';
+import SignIn from './Auth/SignIn';
 import Header from './Components/Header';
 import Home from './Components/Home';
 import Main from './Components/Main';
@@ -16,10 +17,12 @@ function App() {
 		<>
 		<Routes>
 			<Route path={HOME_ROUTE} element={<Home/>} />
-			<Route path={AUTH_ROUTE} element={<Auth />} />
-			<Route path={SIGN_IN_ROUTE} element={<Auth />} />
-			<Route path={SIGN_UP_ROUTE} element={<Auth />} />
-			<Route path='/*' element={<Home />} />
+			<Route path="auth/*" element={<Auth />}/>
+			<Route path="/*/signin" element={<Auth />}/>
+			<Route path="/*/signup" element={<Auth />}/>
+			{/* <Route path="auth/*" element={<Auth />}/>
+			<Route path="signup" element={<Auth />} />
+			<Route path='/*' element={<Home />} /> */}
 		</Routes>
 		</>
 	);
