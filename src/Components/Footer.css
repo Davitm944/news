@@ -1,0 +1,9 @@
+.social_icons {
+	display: flex;
+	justify-content: space-around;
+	width: 50%;
+}
+
+.icon {
+	color: #fff;
+}

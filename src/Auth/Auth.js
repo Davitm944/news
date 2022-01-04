@@ -71,7 +71,6 @@ function Auth() {
 				clearInputs();
 				setUser(user);
 				dispatch(editHasAccount(true));
-				alert(user);
 				navigate(HOME_ROUTE);
 			} else {
 				setUser('');

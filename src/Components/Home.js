@@ -7,6 +7,7 @@ import Card from './Card';
 import { useDispatch, useSelector } from 'react-redux';
 import { editTerm, selectTerm } from '../redux/termSlice';
 import Header from './Header';
+import Footer from './Footer';
 
 const useStyles = makeStyles({
 	wrapper     : {
@@ -87,6 +88,7 @@ function Home() {
 				);
 			})}
 		</div>
+		<Footer></Footer>
 		</>
 	);
 }

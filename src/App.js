@@ -20,9 +20,6 @@ function App() {
 			<Route path="auth/*" element={<Auth />}/>
 			<Route path="/*/signin" element={<Auth />}/>
 			<Route path="/*/signup" element={<Auth />}/>
-			{/* <Route path="auth/*" element={<Auth />}/>
-			<Route path="signup" element={<Auth />} />
-			<Route path='/*' element={<Home />} /> */}
 		</Routes>
 		</>
 	);
